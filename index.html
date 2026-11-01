@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Anakin ($BABYKIN)</title>
+  <meta name="description" content="Baby Anakin ($BABYKIN) — Podracing champ, droid builder, and future Sith Lord. The Force is strong with this kid.">
+  <meta name="theme-color" content="#140e09">
+  <link rel="icon" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#140e09",
+            sun: "#FFD56A",
+            "sun-deep": "#E39B3A",
+            sand: "#F6E6CF",
+            clay: "#D7C0A0",
+            eye: "#7EBFDC",
+            saber: "#FF3B30"
+          },
+          fontFamily: {
+            epic: ["Cinzel", "serif"],
+            display: ["Orbitron", "sans-serif"],
+            body: ["Exo 2", "sans-serif"]
+          },
+          boxShadow: {
+            sun: "0 0 32px rgba(255, 213, 106, 0.28)",
+            saber: "0 0 16px rgba(255, 59, 48, 0.75)",
+            eye: "0 0 16px rgba(126, 191, 220, 0.55)"
+          },
+          keyframes: {
+            marquee: {
+              "0%": { transform: "translateX(0)" },
+              "100%": { transform: "translateX(-50%)" }
+            },
+            rise: {
+              "0%": { opacity: "0", transform: "translateY(16px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" }
+            },
+            glow: {
+              "0%, 100%": { boxShadow: "0 0 16px rgba(255, 213, 106, 0.28)" },
+              "50%": { boxShadow: "0 0 34px rgba(255, 213, 106, 0.62)" }
+            }
+          },
+          animation: {
+            marquee: "marquee 32s linear infinite",
+            rise: "rise 0.8s ease both",
+            glow: "glow 2.8s ease-in-out infinite",
+            orbit: "spin 18s linear infinite"
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body { background: #140e09; color: #F6E6CF; }
+    ::selection { background: #FFD56A; color: #140e09; }
+    :focus-visible { outline: 2px solid #FFD56A; outline-offset: 3px; }
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: #140e09; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(#FFD56A, #E39B3A); border-radius: 999px; }
+    .panel {
+      background:
+        linear-gradient(180deg, rgba(62, 42, 24, 0.82), rgba(20, 14, 9, 0.88));
+      box-shadow: inset 0 1px 0 rgba(255, 213, 106, 0.22), 0 20px 50px rgba(0, 0, 0, 0.28);
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden bg-ink font-body text-sand antialiased">
+  <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-sun focus:px-4 focus:py-2 focus:text-ink">Skip to content</a>
+
+  <video class="pointer-events-none fixed inset-0 z-0 h-full w-full object-cover brightness-110 contrast-125 saturate-125" autoplay muted loop playsinline preload="auto">
+    <source src="bg.mp4" type="video/mp4">
+  </video>
+  <div class="pointer-events-none fixed inset-0 z-0 bg-[#120a08]/30"></div>
+  <div class="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_at_center,transparent_42%,rgba(12,6,4,0.78)_100%)]"></div>
+
+  <div class="relative z-10">
+  <div class="pointer-events-none fixed bottom-28 left-3 top-28 z-40 hidden w-[3px] rounded-full bg-saber shadow-saber xl:block" aria-hidden="true"></div>
+  <div class="pointer-events-none fixed bottom-28 right-3 top-28 z-40 hidden w-[3px] rounded-full bg-eye shadow-eye xl:block" aria-hidden="true"></div>
+
+  <header class="sticky top-0 z-50 border-b border-sun/20 bg-ink/75 backdrop-blur-md">
+    <div class="h-[3px] bg-gradient-to-r from-saber via-sun to-eye"></div>
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
+      <a href="#top" class="flex min-w-0 items-center gap-3">
+        <img src="logo.png" width="600" height="600" alt="" class="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-sun">
+        <span class="min-w-0">
+          <span class="block truncate font-epic text-sm leading-none text-sun sm:text-base">Baby Anakin</span>
+          <span class="mt-1 block font-display text-[10px] tracking-[0.32em] text-eye">BABYKIN</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm text-clay md:flex" aria-label="Primary">
+        <a class="transition hover:text-sun" href="#lore">The Kid</a>
+        <a class="transition hover:text-sun" href="#how-to-buy">How to Buy</a>
+        <a class="transition hover:text-sun" href="#chart">Chart</a>
+      </nav>
+      <div class="flex shrink-0 items-center gap-2">
+        <a href="https://t.me/Baby_Anakin" target="_blank" rel="noopener noreferrer" aria-label="Baby Anakin on Telegram" title="Telegram" class="hidden overflow-hidden rounded-full ring-1 ring-white/25 transition hover:ring-sun sm:inline-flex">
+          <img src="tg.png" width="975" height="997" alt="" class="h-9 w-9">
+        </a>
+        <a href="https://x.com/Baby_Anakin" target="_blank" rel="noopener noreferrer" aria-label="Baby Anakin on X" title="X" class="hidden overflow-hidden rounded-lg ring-1 ring-white/25 transition hover:ring-sun sm:inline-flex">
+          <img src="x.png" width="554" height="554" alt="" class="h-9 w-9 object-cover">
+        </a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-gradient-to-r from-[#FFE7A3] via-sun to-sun-deep px-4 py-2 font-display text-[11px] font-bold tracking-[0.18em] text-ink transition hover:brightness-110">Buy Now</a>
+      </div>
+    </div>
+    <nav class="flex justify-center gap-6 border-t border-sun/15 px-4 py-2 text-xs tracking-wide text-clay md:hidden" aria-label="Mobile">
+      <a class="hover:text-sun" href="#lore">The Kid</a>
+      <a class="hover:text-sun" href="#how-to-buy">How to Buy</a>
+      <a class="hover:text-sun" href="#chart">Chart</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section id="top" class="scroll-mt-24">
+      <div class="relative mx-auto max-w-6xl px-4 pt-6 sm:px-5 sm:pt-8">
+        <div class="relative rounded-2xl bg-gradient-to-r from-sun via-[#FFF1C9] to-sun-deep p-px shadow-sun sm:rounded-3xl">
+          <div class="relative overflow-hidden rounded-[15px] bg-ink sm:rounded-[23px]">
+            <img src="banner.png" width="1500" height="500" alt="Baby Anakin in a podracer on Tatooine, twin suns setting while Darth Vader looms over the dunes" class="block h-auto w-full">
+            <span class="pointer-events-none absolute left-3 top-3 hidden h-8 w-8 border-l-2 border-t-2 border-sun sm:block" aria-hidden="true"></span>
+            <span class="pointer-events-none absolute right-3 top-3 hidden h-8 w-8 border-r-2 border-t-2 border-sun sm:block" aria-hidden="true"></span>
+            <span class="pointer-events-none absolute bottom-3 left-3 hidden h-8 w-8 border-b-2 border-l-2 border-sun sm:block" aria-hidden="true"></span>
+            <span class="pointer-events-none absolute bottom-3 right-3 hidden h-8 w-8 border-b-2 border-r-2 border-sun sm:block" aria-hidden="true"></span>
+            <p class="absolute left-4 top-4 hidden items-center gap-2 rounded-full bg-ink/75 px-3 py-1 font-display text-[10px] tracking-[0.28em] text-sand sm:flex">
+              <span class="h-2 w-2 animate-pulse rounded-full bg-saber" aria-hidden="true"></span>
+              OUTER RIM
+            </p>
+            <p class="absolute bottom-4 right-5 hidden font-display text-[10px] tracking-[0.28em] text-sun sm:block">BOONTA EVE</p>
+          </div>
+        </div>
+
+        <div class="relative z-10 mx-auto mt-6 w-fit md:-mt-20">
+          <div class="absolute -inset-2 animate-orbit rounded-full border border-dashed border-sun/80 motion-reduce:animate-none" aria-hidden="true"></div>
+          <div class="absolute -inset-4 rounded-full border border-eye/30" aria-hidden="true"></div>
+          <img src="logo.png" width="600" height="600" alt="Baby Anakin logo" class="relative h-28 w-28 rounded-full object-cover ring-4 ring-ink shadow-sun sm:h-36 sm:w-36">
+        </div>
+      </div>
+
+      <div class="relative mx-auto max-w-3xl px-5 pb-6 pt-6 text-center">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(20,14,9,0.84)_0%,rgba(20,14,9,0.5)_58%,transparent_78%)]" aria-hidden="true"></div>
+        <div class="relative animate-rise motion-reduce:animate-none">
+          <p class="font-display text-[10px] uppercase leading-loose tracking-[0.32em] text-[#FFE81F] sm:text-xs">
+            A long time ago<br>in a galaxy far, far away
+          </p>
+          <h1 class="mt-3 font-epic text-[clamp(3.1rem,8vw,6rem)] font-black leading-[0.9] text-sun [text-shadow:0_0_28px_rgba(255,213,106,0.45),0_8px_28px_rgba(0,0,0,0.85)]">
+            <span class="block">Baby</span>
+            <span class="block">Anakin</span>
+          </h1>
+          <div class="mt-5 flex items-center justify-center gap-3 sm:gap-4">
+            <span class="h-px w-10 bg-gradient-to-r from-transparent to-sun sm:w-16" aria-hidden="true"></span>
+            <p class="font-display text-lg tracking-[0.42em] text-eye sm:text-xl"><span class="text-sun">$</span>BABYKIN</p>
+            <span class="h-px w-10 bg-gradient-to-l from-transparent to-sun sm:w-16" aria-hidden="true"></span>
+          </div>
+          <p class="mt-2 font-display text-[10px] tracking-[0.38em] text-clay">SYMBOL · BABYKIN · SOLANA</p>
+          <p class="mx-auto mt-6 max-w-xl text-base italic leading-relaxed text-sand sm:text-lg">
+            Podracing champ, droid builder, and future Sith Lord.
+            <span class="mt-1 block font-semibold not-italic text-sun">The Force is strong with this kid.</span>
+          </p>
+
+          <div class="mx-auto mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
+            <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#FFE7A3] via-sun to-sun-deep px-8 py-3.5 font-display text-xs font-bold tracking-[0.22em] text-ink animate-glow motion-reduce:animate-none transition hover:scale-[1.03] hover:brightness-110">Buy Now</a>
+            <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-eye/70 bg-eye/10 px-8 py-3.5 font-display text-xs font-bold tracking-[0.22em] text-eye transition hover:scale-[1.03] hover:bg-eye/20">Chart</a>
+          </div>
+
+          <div class="mt-5 flex items-center justify-center gap-3">
+            <a href="https://t.me/Baby_Anakin" target="_blank" rel="noopener noreferrer" aria-label="Baby Anakin on Telegram" title="Telegram" class="overflow-hidden rounded-full ring-1 ring-white/30 transition hover:scale-105 hover:ring-sun">
+              <img src="tg.png" width="975" height="997" alt="" class="h-11 w-11">
+            </a>
+            <a href="https://x.com/Baby_Anakin" target="_blank" rel="noopener noreferrer" aria-label="Baby Anakin on X" title="X" class="overflow-hidden rounded-xl ring-1 ring-white/30 transition hover:scale-105 hover:ring-sun">
+              <img src="x.png" width="554" height="554" alt="" class="h-11 w-11 object-cover">
+            </a>
+          </div>
+
+          <div class="mx-auto mt-6 flex max-w-xl flex-col gap-3 rounded-2xl border border-sun/35 bg-ink/80 p-3 text-left shadow-sun sm:flex-row sm:items-center sm:justify-between sm:p-4">
+            <div class="min-w-0">
+              <p class="font-display text-[10px] tracking-[0.32em] text-clay">CONTRACT ADDRESS</p>
+              <p class="mt-1 truncate font-display text-lg tracking-[0.28em] text-sun sm:text-xl">
+                <span class="js-ca select-all">TBA</span>
+                <span class="ml-2 inline-block h-4 w-[2px] animate-pulse bg-eye align-middle motion-reduce:animate-none" aria-hidden="true"></span>
+              </p>
+            </div>
+            <button type="button" data-copy class="cursor-pointer rounded-xl bg-gradient-to-r from-[#FFE7A3] via-sun to-sun-deep px-5 py-3 font-display text-[11px] font-bold tracking-[0.22em] text-ink transition hover:brightness-110">Copy</button>
+          </div>
+          <p class="mt-3 text-xs text-clay">Match this CA in your wallet before you swap.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="overflow-hidden border-y border-sun/25 bg-ink/70">
+      <div class="flex w-max animate-marquee hover:[animation-play-state:paused] motion-reduce:animate-none">
+        <p class="whitespace-nowrap py-2.5 pr-8 font-display text-[11px] tracking-[0.32em] text-sun sm:text-xs">$BABYKIN ✦ PODRACING CHAMP ✦ DROID BUILDER ✦ FUTURE SITH LORD ✦ THE FORCE IS STRONG WITH THIS KID ✦ SOLANA ✦</p>
+        <p class="whitespace-nowrap py-2.5 pr-8 font-display text-[11px] tracking-[0.32em] text-sun sm:text-xs" aria-hidden="true">$BABYKIN ✦ PODRACING CHAMP ✦ DROID BUILDER ✦ FUTURE SITH LORD ✦ THE FORCE IS STRONG WITH THIS KID ✦ SOLANA ✦</p>
+      </div>
+    </div>
+
+    <section id="lore" class="scroll-mt-24 px-4 py-14 sm:px-5 sm:py-16">
+      <div class="panel mx-auto max-w-6xl rounded-[2rem] border border-sun/25 px-5 py-12 backdrop-blur-md sm:px-10">
+        <header class="mx-auto max-w-2xl text-center">
+          <p class="font-display text-[11px] tracking-[0.4em] text-eye">THE KID FROM TATOOINE</p>
+          <h2 class="mt-3 font-epic text-4xl text-sun sm:text-5xl">Before the Mask</h2>
+          <p class="mt-4 text-lg text-sand">Podracing champ. Droid builder. Future Sith Lord.</p>
+        </header>
+        <div class="mt-10 grid gap-5 lg:grid-cols-3">
+          <article class="relative overflow-hidden rounded-2xl border border-sun/30 bg-ink/55 p-6">
+            <span class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-sun to-transparent" aria-hidden="true"></span>
+            <p class="font-display text-[11px] tracking-[0.28em] text-sun">01 · MOS ESPA</p>
+            <h3 class="mt-3 font-epic text-2xl text-sand">Podracing Champ</h3>
+            <p class="mt-3 leading-relaxed text-clay">Youngest human to take the Boonta Eve Classic. $BABYKIN is that same straightaway energy: quick hands, loud engines, and a kid who does not blink.</p>
+          </article>
+          <article class="relative overflow-hidden rounded-2xl border border-eye/30 bg-ink/55 p-6">
+            <span class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-eye to-transparent" aria-hidden="true"></span>
+            <p class="font-display text-[11px] tracking-[0.28em] text-eye">02 · THE WORKSHOP</p>
+            <h3 class="mt-3 font-epic text-2xl text-sand">Droid Builder</h3>
+            <p class="mt-3 leading-relaxed text-clay">He built a protocol droid out of desert scrap and taught it millions of languages. $BABYKIN is the community build, passed wallet to wallet on Solana.</p>
+          </article>
+          <article class="relative overflow-hidden rounded-2xl border border-saber/40 bg-ink/55 p-6">
+            <span class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-saber to-transparent" aria-hidden="true"></span>
+            <p class="font-display text-[11px] tracking-[0.28em] text-saber">03 · THE PROPHECY</p>
+            <h3 class="mt-3 font-epic text-2xl text-sand">Future Sith Lord</h3>
+            <p class="mt-3 leading-relaxed text-clay">The helmet is still too big. The story starts in the dunes, with a grin and a gift too large for one planet. The Force is strong with this kid.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-to-buy" class="scroll-mt-24 px-4 py-4 sm:px-5 sm:py-6">
+      <div class="panel mx-auto max-w-6xl rounded-[2rem] border border-sun/25 px-5 py-12 backdrop-blur-md sm:px-10">
+        <header class="mx-auto max-w-2xl text-center">
+          <p class="font-display text-[11px] tracking-[0.4em] text-eye">SOLANA</p>
+          <h2 class="mt-3 font-epic text-4xl text-sun sm:text-5xl">How to Buy</h2>
+          <div class="mx-auto mt-4 h-[3px] w-40 rounded-full bg-gradient-to-r from-transparent via-saber to-transparent shadow-saber" aria-hidden="true"></div>
+          <p class="mt-5 text-lg leading-relaxed text-sand">Four steps to buy $BABYKIN with SOL. You need a Solana wallet and a little SOL for the swap and the network fee.</p>
+        </header>
+
+        <div class="mx-auto mt-8 flex max-w-xl flex-col gap-3 rounded-2xl border border-sun/30 bg-ink/70 p-3 sm:flex-row sm:items-center sm:justify-between sm:p-4">
+          <div class="min-w-0 text-left">
+            <p class="font-display text-[10px] tracking-[0.32em] text-clay">CONTRACT ADDRESS</p>
+            <p class="mt-1 truncate font-display text-lg tracking-[0.28em] text-sun"><span class="js-ca select-all">TBA</span></p>
+          </div>
+          <button type="button" data-copy class="cursor-pointer rounded-xl bg-gradient-to-r from-[#FFE7A3] via-sun to-sun-deep px-5 py-3 font-display text-[11px] font-bold tracking-[0.22em] text-ink transition hover:brightness-110">Copy CA</button>
+        </div>
+
+        <ol class="mt-10 grid list-none gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <li class="relative overflow-hidden rounded-2xl border border-sun/25 bg-ink/50 p-6">
+            <span class="pointer-events-none absolute -right-1 -top-2 font-epic text-7xl leading-none text-sun/10" aria-hidden="true">01</span>
+            <p class="font-display text-[11px] tracking-[0.28em] text-sun">01 · HANGAR</p>
+            <h3 class="mt-3 font-epic text-xl text-sand">Create a Solana Wallet</h3>
+            <p class="mt-3 text-sm leading-relaxed text-clay">Install <a class="text-eye underline decoration-eye/40 underline-offset-2 hover:text-sun" href="https://phantom.app/" target="_blank" rel="noopener noreferrer">Phantom</a> or <a class="text-eye underline decoration-eye/40 underline-offset-2 hover:text-sun" href="https://solflare.com/" target="_blank" rel="noopener noreferrer">Solflare</a>. Create a wallet and write the secret recovery phrase on paper. Never share it. Anyone with that phrase owns the wallet.</p>
+          </li>
+          <li class="relative overflow-hidden rounded-2xl border border-sun/25 bg-ink/50 p-6">
+            <span class="pointer-events-none absolute -right-1 -top-2 font-epic text-7xl leading-none text-sun/10" aria-hidden="true">02</span>
+            <p class="font-display text-[11px] tracking-[0.28em] text-sun">02 · FUEL</p>
+            <h3 class="mt-3 font-epic text-xl text-sand">Fund It with SOL</h3>
+            <p class="mt-3 text-sm leading-relaxed text-clay">Buy SOL from an exchange you trust and send it to your wallet’s Solana address. Keep a little extra SOL in the wallet. Solana charges a small fee on the swap.</p>
+          </li>
+          <li class="relative overflow-hidden rounded-2xl border border-sun/25 bg-ink/50 p-6">
+            <span class="pointer-events-none absolute -right-1 -top-2 font-epic text-7xl leading-none text-sun/10" aria-hidden="true">03</span>
+            <p class="font-display text-[11px] tracking-[0.28em] text-sun">03 · TARGET LOCK</p>
+            <h3 class="mt-3 font-epic text-xl text-sand">Open the $BABYKIN Swap</h3>
+            <p class="mt-3 text-sm leading-relaxed text-clay">Press Buy Now. Pump.fun opens with SOL as the token you pay and $BABYKIN as the token you receive. Before you continue, match the mint to the contract address on this page. If it does not match, stop.</p>
+          </li>
+          <li class="relative overflow-hidden rounded-2xl border border-sun/25 bg-ink/50 p-6">
+            <span class="pointer-events-none absolute -right-1 -top-2 font-epic text-7xl leading-none text-sun/10" aria-hidden="true">04</span>
+            <p class="font-display text-[11px] tracking-[0.28em] text-sun">04 · CHECKERED FLAG</p>
+            <h3 class="mt-3 font-epic text-xl text-sand">Swap and Confirm</h3>
+            <p class="mt-3 text-sm leading-relaxed text-clay">Enter how much SOL to spend, review the quote, and approve the transaction in your wallet. $BABYKIN then lands in the wallet. If it is hidden, refresh or paste the CA to add the token. Open Chart to follow the race.</p>
+          </li>
+        </ol>
+
+        <div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=TBA" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#FFE7A3] via-sun to-sun-deep px-8 py-3.5 font-display text-xs font-bold tracking-[0.22em] text-ink transition hover:brightness-110 sm:w-auto">Buy Now</a>
+          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center rounded-full border border-eye/70 bg-eye/10 px-8 py-3.5 font-display text-xs font-bold tracking-[0.22em] text-eye transition hover:bg-eye/20 sm:w-auto">Chart</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="chart" class="scroll-mt-24 px-4 py-14 sm:px-5">
+      <div class="panel mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-sun/25 backdrop-blur-md">
+        <div class="flex flex-col gap-4 border-b border-sun/20 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+          <div>
+            <p class="font-display text-[11px] tracking-[0.36em] text-eye">LIVE TRACKING</p>
+            <h2 class="mt-2 font-epic text-3xl text-sun sm:text-4xl">Dexscreener</h2>
+            <p class="mt-2 max-w-xl text-sm text-clay">The podrace, on-chain. $BABYKIN on Solana, embedded from Dexscreener.</p>
+          </div>
+          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-eye/70 bg-eye/10 px-6 py-3 font-display text-[11px] font-bold tracking-[0.22em] text-eye transition hover:bg-eye/20">Chart</a>
+        </div>
+        <div class="relative bg-ink">
+          <p class="absolute inset-0 flex items-center justify-center font-display text-[11px] tracking-[0.3em] text-clay">LOADING CHART</p>
+          <iframe
+            title="Dexscreener chart for Baby Anakin on Solana"
+            src="https://dexscreener.com/solana/TBA?embed=1&amp;loadChartSettings=0&amp;chartLeftToolbar=0&amp;chartDefaultOnMobile=1&amp;chartTheme=dark&amp;theme=dark&amp;chartStyle=1&amp;chartType=usd&amp;interval=15&amp;info=0&amp;trades=0"
+            class="relative z-10 h-[420px] w-full border-0 sm:h-[540px]"
+            loading="lazy"
+            allow="fullscreen"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 pb-16 sm:px-5">
+      <div class="panel mx-auto max-w-4xl rounded-[2rem] border border-sun/30 px-6 py-12 text-center backdrop-blur-md sm:px-10">
+        <p class="font-display text-[11px] tracking-[0.4em] text-eye">JOIN THE PODRACE</p>
+        <h2 class="mt-3 font-epic text-3xl leading-tight text-sun sm:text-5xl">The Force is strong with this kid.</h2>
+        <p class="mx-auto mt-4 max-w-xl text-lg text-sand">Podracing champ, droid builder, and future Sith Lord. Buy $BABYKIN with SOL.</p>
+        <div class="mx-auto mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#FFE7A3] via-sun to-sun-deep px-8 py-3.5 font-display text-xs font-bold tracking-[0.22em] text-ink transition hover:brightness-110">Buy Now</a>
+          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-eye/70 bg-eye/10 px-8 py-3.5 font-display text-xs font-bold tracking-[0.22em] text-eye transition hover:bg-eye/20">Chart</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-sun/20 bg-ink/80 px-5 pb-28 pt-10 backdrop-blur-md md:pb-10">
+    <div class="mx-auto flex max-w-6xl flex-col items-center gap-5 text-center">
+      <img src="logo.png" width="600" height="600" alt="" class="h-14 w-14 rounded-full object-cover ring-2 ring-sun">
+      <div>
+        <p class="font-epic text-xl text-sun">Baby Anakin</p>
+        <p class="mt-1 font-display text-[11px] tracking-[0.32em] text-eye">$BABYKIN</p>
+      </div>
+      <p class="max-w-md text-sm italic text-clay">Podracing champ, droid builder, and future Sith Lord. The Force is strong with this kid.</p>
+      <div class="flex items-center gap-3">
+        <a href="https://t.me/Baby_Anakin" target="_blank" rel="noopener noreferrer" aria-label="Baby Anakin on Telegram" class="overflow-hidden rounded-full ring-1 ring-white/30 transition hover:ring-sun">
+          <img src="tg.png" width="975" height="997" alt="" class="h-10 w-10">
+        </a>
+        <a href="https://x.com/Baby_Anakin" target="_blank" rel="noopener noreferrer" aria-label="Baby Anakin on X" class="overflow-hidden rounded-lg ring-1 ring-white/30 transition hover:ring-sun">
+          <img src="x.png" width="554" height="554" alt="" class="h-10 w-10 object-cover">
+        </a>
+      </div>
+      <p class="max-w-xl text-xs leading-relaxed text-clay/80">$BABYKIN is a meme coin on Solana, made for fun. It is not financial advice. Only spend what you can afford to lose, and always confirm the contract address before you swap. Fan-made. Not affiliated with Lucasfilm or Disney.</p>
+      <p class="font-display text-[10px] tracking-[0.22em] text-clay/70">© 2026 BABYKIN</p>
+    </div>
+  </footer>
+
+  <div class="fixed inset-x-0 bottom-0 z-50 border-t border-sun/30 bg-ink/92 px-3 pt-3 backdrop-blur-md md:hidden" style="padding-bottom: max(0.75rem, env(safe-area-inset-bottom))">
+    <div class="mx-auto flex max-w-lg gap-2">
+      <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=TBA" target="_blank" rel="noopener noreferrer" class="inline-flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#FFE7A3] via-sun to-sun-deep py-3 font-display text-[11px] font-bold tracking-[0.18em] text-ink">Buy Now</a>
+      <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex flex-1 items-center justify-center rounded-full border border-eye/70 bg-eye/10 py-3 font-display text-[11px] font-bold tracking-[0.18em] text-eye">Chart</a>
+    </div>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite" class="pointer-events-none fixed bottom-24 left-1/2 z-[70] -translate-x-1/2 rounded-full bg-sun px-5 py-2 text-center font-display text-[11px] tracking-[0.16em] text-ink opacity-0 shadow-sun transition-opacity duration-300 md:bottom-8"></div>
+  </div>
+
+  <script>
+    (function () {
+      var video = document.querySelector("video");
+      if (video && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        video.pause();
+        video.removeAttribute("autoplay");
+      }
+
+      var toast = document.getElementById("toast");
+      var toastTimer;
+
+      function showToast(message) {
+        toast.textContent = message;
+        toast.classList.remove("opacity-0");
+        toast.classList.add("opacity-100");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+          toast.classList.add("opacity-0");
+          toast.classList.remove("opacity-100");
+        }, 1700);
+      }
+
+      function fallbackCopy(text) {
+        var input = document.createElement("textarea");
+        input.value = text;
+        input.setAttribute("readonly", "");
+        input.style.position = "fixed";
+        input.style.left = "-9999px";
+        document.body.appendChild(input);
+        input.select();
+        input.setSelectionRange(0, text.length);
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (err) { ok = false; }
+        document.body.removeChild(input);
+        return ok;
+      }
+
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        }
+        return fallbackCopy(text) ? Promise.resolve() : Promise.reject();
+      }
+
+      document.querySelectorAll("[data-copy]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var node = document.querySelector(".js-ca");
+          var ca = node ? node.textContent.trim() : "";
+          var previous = btn.textContent;
+          copyText(ca).then(function () {
+            btn.textContent = "Copied";
+            showToast("CA copied");
+            setTimeout(function () { btn.textContent = previous; }, 1600);
+          }).catch(function () {
+            showToast("Select the CA and copy it");
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
